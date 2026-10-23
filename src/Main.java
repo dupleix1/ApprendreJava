@@ -16,7 +16,7 @@ public class Main {
 //concatenation: assembler des chaines de caracteres a l´aide de +
         System.out.println("Ange " + d + " " + a+ "\nans"); // \n force le retour a la ligne!
 
-        System.out.println("Mon deuxième test Git");
+
 
     }
 }
