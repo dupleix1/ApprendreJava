@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args ){
         //        ----||----afficher Hello WOrld et voir les differents types de Print(println, print == printf,...)----||----
@@ -16,6 +19,14 @@ public class Main {
 //concatenation: assembler des chaines de caracteres a l´aide de +
         System.out.println("Ange " + d + " " + a+ "\nans"); // \n force le retour a la ligne!
 
+        // interagir avec l´utlisateur: Scanner
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veillez entrer votre NOm: ");
+        String nom = scanner.nextLine(); // il ya plusieurs type de scanner.next commencant toujours par la majuscule : scanner.nextLine(chaine de caractere),scanner.Int()(entier),...
+        System.out.println("Votre NOm est: " + nom);
+
+        
 
 
     }
