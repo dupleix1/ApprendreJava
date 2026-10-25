@@ -106,7 +106,7 @@ public class Main {
         String signe = (numéro > 0) ? "Positif" : "Negatif";
         System.out.println("le signe du nombre est " + signe);
 
-        /*                     ====== CALCULATEUR DE MENTION! ======
+        //                     ====== CALCULATEUR DE MENTION! ======
 
         System.out.println("CALCULATEUR DE MENTION !");
         System.out.println();
@@ -147,6 +147,6 @@ public class Main {
             System.out.println("Vous avez obtenu la mention Tres Bien et en plus de ca les felicitations du Jury; ");
 
         scanner.close();
-        }*/
+        }
     }
 }
