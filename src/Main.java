@@ -94,7 +94,7 @@ public class Main {
 
         System.out.println(true || false);
         System.out.println(true && false);
-// test:
+/* test:
         int nombre = 9;
         if (nombre > 0 && nombre % 2 == 0) {
             System.out.println("Le nombre est positif et pair ");
@@ -145,8 +145,90 @@ public class Main {
             System.out.println("Vous avez obtenu la mention Tres Bien; ");
         } else if (moyenne >= 18) {
             System.out.println("Vous avez obtenu la mention Tres Bien et en plus de ca les felicitations du Jury; ");
-
-        scanner.close();
         }
+        scanner.close();*/
+
+        /* Les boucles : while / for !
+
+        int i = 0;
+        while (i <= 100) {
+            System.out.println(i);
+            i++;
+        }
+// Remarque : While est plus utilisé dans les cas booleens, qui ont a faire a vrai ou faux
+// avec For on peut compacter une les conditions d´une bouvle en une seule ligne
+
+        for (i = 0; i <= 100; i++) {
+            System.out.println(i);
+        }
+//Dowhile :Meme conditions mais ici on commence par le´execution avant la condition
+
+//foreach! ceci concerne le fait de pourcourir un tableau . La syntaxe est la suivante :
+
+//continue et break:
+    System.out.println();
+        int j = 0;
+        while (j < 10) {
+            j++;
+            if (j % 2 == 1) {
+                continue;
+
+            }
+            System.out.println(j);*/
+        // cette structure veut dire que a chaque fois que l´on parcour cette boucle , ca doit continuer lorsque ca tombe sur la condition par consequent on obtient comme reponse uniquement les nombre pairs !
+
+//                      ===== Projet 3: JEU DU MYSTER : LE JUSTE PRIX=====
+
+        int nombre_aleatoire = 0;
+        for (int i = 0; i <= 100; i++) {
+            nombre_aleatoire = (int) (Math.random() * 100) + 1;
+        }
+
+        int essai=0;
+        int nombre_tentative = 0;
+        System.out.println("Veillez saisir un nombre");
+        essai= scanner.nextInt() ;
+        while(essai != nombre_aleatoire){
+            System.out.println("Veillez reessayer une fois de plus");
+
+            essai = scanner.nextInt();
+            if (essai > nombre_aleatoire){
+                System.out.println("le nombre saisi est trop grand");
+            }else if(essai < nombre_aleatoire){
+                System.out.println("le nombre saisi est trop petit");
+            }else{
+                System.out.println("Bravo! vous avez trouver le bon nombre !!");
+            }
+        }
+        System.out.println("Votre nombre de tentative est de : " + nombre_tentative);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
