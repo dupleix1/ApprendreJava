@@ -1,5 +1,6 @@
 
-import java.util.Scanner;
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -92,8 +93,8 @@ public class Main {
         // true = 1
         //false = 0 : ceci dasn la logique booleenne
 
-        System.out.println(true || false);
-        System.out.println(true && false);
+        //System.out.println(true || false);
+        //System.out.println(true && false);
 /* test:
         int nombre = 9;
         if (nombre > 0 && nombre % 2 == 0) {
@@ -179,7 +180,7 @@ public class Main {
 
 //                      ===== Projet 3: JEU DU MYSTER : LE JUSTE PRIX=====
 
-        int nombre_aleatoire = 0;
+       /* int nombre_aleatoire = 0;
         for (int i = 0; i <= 100; i++) {
             nombre_aleatoire = (int) (Math.random() * 100) + 1;
         }
@@ -201,23 +202,101 @@ public class Main {
             }
         }
         System.out.println("Votre nombre de tentative est de : " + nombre_tentative);
+*/
+/*Les Tableaux
+        // syntaxe des tablaux (les tableaux sont toujours defini a taille fixe )
+         double[] notes = {12.3, 13 , 16};// toujours ajouter les crochets apres le datentype (int[] , float[] ,...)
+         // parcourir un tableau :
+        // premiere facon :
+        /*for  (int i = 0; i <= notes.length; i++) {
+            System.out.println("note" + notes[i] + " : " + notes[i]);
+        }
+*/
+ /*       // deuxieme facon :
+        for ( double j : notes ){
+            System.out.println(j);
+
+        }
+// tableaux avec les tailles dinamiques: ArrayList
+// syntaxe
+        ArrayList<String> nom = new ArrayList<>();// dans les chevrons on ecrit les types de données mais avec les majuscules au debut et le nom entier du Datentyp (Integer , Double , FLoat , ... En ce moment , on les appeles de references )
+        nom.add("Alice");
+        nom.add("Bob");
+        nom.remove("Alice");
+        System.out.println(nom);
+
+//Map : Hashmap , Treemap , Hashset , Treeset
+        //MAp : Paire clé - valeur
+        // pour attribuer les valeurs concretes on utilise la syntaxe : nom_tableau.put(clé , valeur )
+        Map<String , Integer > ages = new TreeMap<>();
+        ages.put("Alice", 18);
+        ages.put("Bob", 19);
+        ages.put("dev", 20);
+
+        System.out.println(ages);
+        // pour afficher la valeur d´une clé a part , on utlise la fonction .get:
+        System.out.println(ages.get("Alice"));
+
+        // parcourir la boucle
+        for (String s :ages.keySet()){
+        System.out.println(s);
+        }
 
 
+// les Set(ca interdit les doublons. et ca ne prend que un seul type de données  )
 
+        Set<Integer > age = new HashSet<>();
+        age.add(18);
+        age.add(19);
+        age.add(19);
 
+        System.out.println(age);
+// Le concept de File (Queue) , pour faire sortir les elemets de la queue , on utilise la fonction .poll
 
+        Queue<String>prenom = new ArrayDeque<>();
+        prenom.add("Alicia");
+        prenom.add("Bobi");
+        prenom.add("devine");
 
+        while (!prenom.isEmpty()) {
+            System.out.println(prenom.poll());
+        }
+*/
 
+//                               ===== PROJET 4:NOTES DE CLASSES  ======
+        System.out.println("Combien d´élève y a t´il dans la classe ?? ");
+        int nombres_etudiant = scanner.nextInt();
 
+        double[] note_total = new double [nombres_etudiant];
 
+        System.out.println("Entrez les notes sur 20: ");
 
+        for (int t= 0 ; t< nombres_etudiant ; t ++){
+            System.out.println("Note de l´etudiant " + (t + 1) + " : " );
+            note_total[t] = scanner.nextDouble();
 
+        }
+        double moyenne = 0;
+        for (int t = 0 ; t < note_total.length ; t++){
+            moyenne += note_total[t]/ nombres_etudiant;
+        }
+        System.out.println("Moyenne general: " + moyenne);
 
+        double note_min = note_total[0];
+        double note_max = note_total[0];
 
+        for (int t = 0 ; t < note_total.length ; t++){
+            if (note_total[t] <note_min){
+                note_min = note_total[t];
+            }
+            if (note_total[t] > note_max){
+                note_max = note_total[t];
+            }
+        }
+        System.out.println("Note minimal: " + note_min);
+        System.out.println("Note maximal: " + note_max);
 
-
-
-
+scanner.close();
 
 
 
