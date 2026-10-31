@@ -117,7 +117,7 @@ public class fonction {
              case 3:System.out.println("3. Verifier si nombre est premier");
                 System.out.print("Veillez entrer un nombre de votre choix : ");
                 int choix = scanner.nextInt();
-                System.out.println("Pour le nombre " + choix + (est_premier(choix)? " Oui" : " Non"));
+                System.out.println((est_premier(choix)? " Oui" : " Non"));
                 System.out.println();
               break;
 
