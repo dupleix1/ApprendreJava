@@ -3,8 +3,44 @@ import java.util.*;
 
 
 public class Main {
+
+// Les fonctions
+    static void dire_bonjour(String nom){
+        System.out.println("bonjour"+ " "+ nom);
+    }
+    static int factoriel(int n){
+      int factoriel = 1;
+      for(int i= 1 ; i <= n; i++) {
+          factoriel *= i ;
+
+      }
+      return factoriel;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) {
-     /*   //        ----||----afficher Hello WOrld et voir les differents types de Print(println, print == printf,...)----||----
+/*       //        ----||----afficher Hello WOrld et voir les differents types de Print(println, print == printf,...)----||----
         System.out.println("Hello World");
         System.out.printf("Je suis dupleix ");
         System.out.println("A l´uni de paderborn");
@@ -61,10 +97,11 @@ public class Main {
         double livre = masse * 2.20462;
         System.out.println(masse + " kg" + " = " + livre + " livres");
 
-        scanner.close(); */
+        scanner.close();
+ */
 
 
-        //===== Les conditions(type booleen: True ou False)
+/*               ===== Les conditions(type booleen: True ou False)
         // if , else if , else:
         /* test:
         int nombre = scanner.nextInt();
@@ -147,9 +184,11 @@ public class Main {
         } else if (moyenne >= 18) {
             System.out.println("Vous avez obtenu la mention Tres Bien et en plus de ca les felicitations du Jury; ");
         }
-        scanner.close();*/
+        scanner.close();
+    */
 
-        /* Les boucles : while / for !
+
+/* Les boucles : while / for !
 
         int i = 0;
         while (i <= 100) {
@@ -175,12 +214,12 @@ public class Main {
                 continue;
 
             }
-            System.out.println(j);*/
+            System.out.println(j);
         // cette structure veut dire que a chaque fois que l´on parcour cette boucle , ca doit continuer lorsque ca tombe sur la condition par consequent on obtient comme reponse uniquement les nombre pairs !
 
 //                      ===== Projet 3: JEU DU MYSTER : LE JUSTE PRIX=====
 
-       /* int nombre_aleatoire = 0;
+        int nombre_aleatoire = 0;
         for (int i = 0; i <= 100; i++) {
             nombre_aleatoire = (int) (Math.random() * 100) + 1;
         }
@@ -202,7 +241,8 @@ public class Main {
             }
         }
         System.out.println("Votre nombre de tentative est de : " + nombre_tentative);
-*/
+        */
+
 /*Les Tableaux
         // syntaxe des tablaux (les tableaux sont toujours defini a taille fixe )
          double[] notes = {12.3, 13 , 16};// toujours ajouter les crochets apres le datentype (int[] , float[] ,...)
@@ -211,8 +251,8 @@ public class Main {
         /*for  (int i = 0; i <= notes.length; i++) {
             System.out.println("note" + notes[i] + " : " + notes[i]);
         }
-*/
- /*       // deuxieme facon :
+
+        // deuxieme facon :
         for ( double j : notes ){
             System.out.println(j);
 
@@ -261,13 +301,13 @@ public class Main {
         while (!prenom.isEmpty()) {
             System.out.println(prenom.poll());
         }
-*/
 
-//                               ===== PROJET 4:NOTES DE CLASSES  ======
+*/
+         //                     ===== PROJET 4:NOTES DE CLASSES  ======
         System.out.println("Combien d´élève y a t´il dans la classe ?? ");
         int nombres_etudiant = scanner.nextInt();
 
-        double[] note_total = new double [nombres_etudiant];
+        double[] note_total = new double [nombres_etudiant];// lorsqu´on recupere les informations, et que l´on veut creer un tableau avec , il faut mettre ces informations entre crochets
 
         System.out.println("Entrez les notes sur 20: ");
 
@@ -300,6 +340,19 @@ scanner.close();
 
 
 
+/*
+// Les fonctions
+        dire_bonjour("Alice");
+        dire_bonjour("Bob");
+        dire_bonjour("Robert");
+
+       int somme = 0;
+        for(int i= 1 ; i <= 3; i++) {
+            factoriel(i);
+            somme +=factoriel(i);
+        }
+        System.out.println("factoriel de "+ 3 + " est "+  factoriel(3));
+        System.out.println("somme : " +  somme );
 
 
 
@@ -309,5 +362,12 @@ scanner.close();
 
 
 
+
+
+
+
+*/
     }
 }
+
+
