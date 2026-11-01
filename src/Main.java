@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
 
-// Les fonctions
+/* Les fonctions
     static void dire_bonjour(String nom){
         System.out.println("bonjour"+ " "+ nom);
     }
@@ -17,27 +17,7 @@ public class Main {
       return factoriel;
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
     public static void main(String[] args) {
 /*       //        ----||----afficher Hello WOrld et voir les differents types de Print(println, print == printf,...)----||----
@@ -303,7 +283,7 @@ public class Main {
         }
 
 */
-         //                     ===== PROJET 4:NOTES DE CLASSES  ======
+         /*                     ===== PROJET 4:NOTES DE CLASSES  ======
         System.out.println("Combien d´élève y a t´il dans la classe ?? ");
         int nombres_etudiant = scanner.nextInt();
 
@@ -339,7 +319,7 @@ public class Main {
 scanner.close();
 
 
-
+*/
 /*
 // Les fonctions
         dire_bonjour("Alice");
@@ -354,19 +334,72 @@ scanner.close();
         System.out.println("factoriel de "+ 3 + " est "+  factoriel(3));
         System.out.println("somme : " +  somme );
 
+*/
+
+/*PROGRAMMATION ORIENTÉE OBJET
+
+    Personne p = new Personne("Alice",18,167,72);
+    Personne p1 = new Personne("Alice");
+    Personne p2= new Personne("Bob",17,167,72);
 
 
+    System.out.println(p1.nom);
+    System.out.println(p2.nom);
+    System.out.println(p.nom);
+    System.out.println(p.age);
+    System.out.println(p.poids);
+    System.out.println(p.taille);
+
+//une classe permet de creer un objet
+//avec la classe on peut creer plusieurs objets differents .ils auront des identifiants uniques chacun
+//pour creer un objet , on utilise toujours le mot "new"
+//pour acceder aux valeurs des attributs de notre objet, la syntaxe est : nom_objetcrée.nom_attribut = valeur
 
 
+// Les constructeurs
+        //apres avoir crée une classe personnalisée , pour joindre les valeurs des attributs ennoncées dans le main au attributs ennoncés dans notre classe personnalisée , on utilise la syntaxe  .this dans la classe qu´on a crée
+//Overloading : surchages de contructeur: meme classe (Personne) mais objets differents(p, p1 , ...)
 
+//Methodes: c´est pour que les parametres de notre classe personnalisée puissent maintenant passer a l´action (elles fonctionnent comme des fonctions)
+        // la methode se cree dans la classe personnalisée et son execution se fait dans le main
 
-
-
-
-
-
+        p.sePresenter();
+        p.viellir();
 
 */
+//L´Encapsulation
+//private / private : proteger les attribues d´une classe pour empecher que n´importe qui ne modifie ses attributs
+
+CompteBancaire compte = new CompteBancaire("Dupleix" , 500);
+ System.out.println(compte.getSolde());// c´st grace au getters , quß on reussi a recuperer un argument privé d´une classe personnalisée . La syntaye est getNomargument(ce qui vient apres le get doit toujours commencer par la majuscule!!!!)
+
+// les Setters: pour modifier un arguments privé
+compte.ajouter(2000);
+System.out.println(compte.getSolde());
+
+//static : partagé par tous les objets de la classe
+
+Employé alice = new Employé("Alice", 25000);
+System.out.println(Employé.nombreEmployé);
+Employé bob = new Employé("Bob", 25000);
+System.out.println(Employé.nombreEmployé);
+Employé.partirEnPause();
+// avec la methode static , on a pas besoin d´instancier un objet de la classe au prealable pour que ca fonctionne dans le main , on peut juste l´appeler avec la classe personnalisée sans avoir besoin de faire un "new ....".
+//mais si la methode n´est pas static, le "new ...." est obligatoire dans le main.
+
+        //Le principe de composition: une classe dans une autre classe
+
+        moteur m = new moteur("V8" , 455);
+        Voiture v = new Voiture ("Ferrari", m);
+
+        v.demarrer();
+        v.afficher();
+
+//L´Heritage : creer une classe a partir d´une autre classe . Exemple far: le cas de la classe animal
+
+
+
+
     }
 }
 
