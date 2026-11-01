@@ -396,9 +396,22 @@ Employé.partirEnPause();
         v.afficher();
 
 //L´Heritage : creer une classe a partir d´une autre classe . Exemple far: le cas de la classe animal
+ Animal a = new Animal("Jordan");
+ Chien c = new Chien("Rex");
+Chat charlie = new Chat ("Charlie");
 
+// la classe parent peut etre utilisé pour instancier la classe enfant , exemple :
+// Chien c = new Chien("Rex")  peut aussi etre :Animal c = new Chien("Rex");
+//Chat charlie = new Chat ("Charlie") peut aussi etre :Animal c =  new Chat ("Charlie");
 
+ System.out.println(a.nom);
+ System.out.println(c.nom);
+ System.out.println(charlie.nom);
 
+ a.faireBruit();
+ c.faireBruit();
+
+charlie.faireBruit();
 
     }
 }
