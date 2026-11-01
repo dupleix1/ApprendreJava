@@ -396,6 +396,7 @@ Employé.partirEnPause();
         v.afficher();
 
 //L´Heritage : creer une classe a partir d´une autre classe . Exemple far: le cas de la classe animal
+    // extends  + nomClasse Parent : permet d´heriter d´une classe parent
  Animal a = new Animal("Jordan");
  Chien c = new Chien("Rex");
 Chat charlie = new Chat ("Charlie");
